@@ -1,5 +1,12 @@
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
   <body>
-    <move element="header.panel" destination="header-wrapper" before="minicart" />
+    <move element="header.panel" destination="header.webjump.container" before="-" />
+    <move element="minicart" destination="header.webjump.container" after="header.panel" />
+    <move element="top.search" destination="header.webjump.container" after="-" />
+
+    <referenceContainer name="header-wrapper">
+      <container name="header.webjump.container" htmlClass="header webjump container" htmlTag="div" />
+    </referenceContainer>
+
   </body>
 </page>
